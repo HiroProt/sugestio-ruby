@@ -1,0 +1,15 @@
+h2. Introduction
+
+This is a basic Ruby library for interfacing with the Sugestio (http://sugestio.com) recommendation service.
+
+h2. Prerequisites
+
+* oauth gem (http://github.com/pelle/oauth)
+
+h2. License
+
+This code is free to use under the terms of the MIT license.
+
+h2. Credits
+
+Written by Martin May (http://github.com/HiroProt). Portions inspired by (http://github.com/archfear/simplegeo-ruby).
