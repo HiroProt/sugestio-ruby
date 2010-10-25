@@ -36,15 +36,15 @@ class Sugestio
     return api_request("/sites/#{@username}/consumptions.json", :post, consumption)
   end
   
-  def get_recommendations(user_id, options)
+  def get_recommendations(user_id, options = {})
     return api_request("/sites/#{@username}/users/#{user_id}/recommendations.json", :get, options)
   end
   
-  def get_similar_items(item_id, options)
+  def get_similar_items(item_id, options = {})
     return api_request("/sites/#{@username}/items/#{item_id}/similar.json", :get, options)
   end
   
-  def get_similar_users(user_id, options)
+  def get_similar_users(user_id, options = {})
     return api_request("/sites/#{@username}/users/#{user_id}/similar.json", :get, options)
   end
 
