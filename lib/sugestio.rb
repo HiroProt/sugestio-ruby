@@ -68,8 +68,7 @@ class Sugestio
     when :post, :put
       response = @access_token.request(method, url, data, headers)
     end
-    
-    puts "Response Code: #{response.code}"
+
     handle_errors(response)
     
     begin
