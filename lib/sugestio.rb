@@ -95,7 +95,7 @@ class Sugestio
     when 500
       raise ServerError, response_description
     else
-      unless [200, 201, 202].include?(response.code)
+      unless [200, 201, 202].include?(response.code.to_i)
         raise UnknownError, response_description
       end
     end
