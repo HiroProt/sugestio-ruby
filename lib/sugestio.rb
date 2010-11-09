@@ -27,9 +27,33 @@ class Sugestio
   def add_user(user)
     return api_request("/sites/#{@username}/users.json", :post, user)
   end
+
+  def delete_user(user_id)
+    return api_request("/sites/#{@username}/users/#{user_id}.json", :delete)
+  end
+
+  def get_user(user_id)
+    return api_request("/sites/#{@username}/users/#{user_id}.json", :get)
+  end
+
+  def get_all_users()
+    return api_request("/sites/#{@username}/users.json", :get)
+  end
   
   def add_item(item)
     return api_request("/sites/#{@username}/items.json", :post, item)
+  end
+
+  def delete_item(item_id)
+    return api_request("/sites/#{@username}/items/#{item_id}.json", :delete)
+  end
+  
+  def get_item(item_id)
+    return api_request("/sites/#{@username}/items/#{item_id}.json", :get)
+  end
+
+  def get_all_items()
+    return api_request("/sites/#{@username}/items.json", :get)
   end
   
   def add_consumption(consumption)
