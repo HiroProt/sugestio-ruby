@@ -10,7 +10,7 @@ A basic Ruby library for interfacing with the Sugestio (http://sugestio.com) rec
 
   require 'sugestio'
   client = Sugestio.new('username', 'password')
-  result = client.get_get_recommendations(user_id)
+  result = client.get_recommendations(user_id)
 
 == Note on Patches/Pull Requests
  
