@@ -7,20 +7,10 @@ class TestArrays < Test::Unit::TestCase
 
 		client = Sugestio.new('sandbox', 'demo')
 
-		item = {:id => 7, :category => ["pop", "rock"], :from => "2010-11-01", :until => "2010-12-01"}
+		item = {:id => 7, "category[]" => ["pop", "rock"], :from => "2010-11-01", :until => "2010-12-01"}
 		result = client.add_item(item)	
 
 		assert_equal(2, result['item'][0]['category'].length)
 	end
-
-	def test_array_nested
-
-		client = Sugestio.new('sandbox', 'demo')
-
-		item = {:id => 7, :category => {"0" => "pop", "1" => "rock"}, :from => "2010-11-01", :until => "2010-12-01"}
-		result = client.add_item(item)	
-
-		assert_equal(2, result['item'][0]['category'].length)
-	end
-
+	
 end
